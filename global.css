@@ -1,0 +1,59 @@
+body {
+  font: 100%/1.5 system-ui, sans-serif;
+  display: flex;
+  flex-flow: column;
+  max-width: 80em;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 1em;
+}
+
+header {
+  display: flex;
+  gap: 1em;
+  align-items: baseline;
+}
+
+#selected-time,
+#any-time {
+  display: block;
+}
+
+em {
+  color: gray;
+  font-style: italic;
+}
+
+/* DESIGN 2 LEGEND */
+.legend.design-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  margin-block: 1em;
+  font-size: 0.9em;
+}
+
+.legend.design-2 > span {
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
+.legend.design-2 > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.swatch {
+  width: 1em;
+  height: 1em;
+  border-radius: 2px;
+  display: inline-block;
+  --color-departures: steelblue;
+  --color-arrivals: darkorange;
+  --color: color-mix(in oklch,
+    var(--color-departures) calc(100% * var(--departure-ratio)),
+    var(--color-arrivals));
+  background: var(--color);
+}
